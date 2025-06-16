@@ -3,89 +3,45 @@
 using namespace std;
 
 int main(){
-
-	string str = "My Name is  Muhammad and i   am 18 years     old ";
-	int spaceCount = 0;
-	int vowelsCount = 0;
-	char lower;
-	char upper;
-	int wordCount = 0;
+	int array[50] = {12, 4, 67, 32, 98, 56};
+	int elementCount=6;
+	int sum=0;
+	int product=1;
+	int pos;
 	
-	//string in reverse order
-	cout << "string in reverse order " << endl;
-	for(int i= str.length()-1; i>=0; i--)	
-	cout << str[i];
+	for(int i=elementCount-1; i>=0; i--)
+		array[i+1] = array[i];
 	
-	//space count in array
-	for(int i=0; i<str.length(); i++)
-		if(str[i] == ' ')
-			spaceCount ++;
-	cout << endl << "numbers of spaces in string array is " << spaceCount;
+	elementCount ++;
 	
-	//vowels count in string array
-	for(int i=0; i<str.length(); i++)
-		if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i'|| str[i] == 'o'|| str[i] == 'u' )
-			vowelsCount ++;
-	cout << endl << "numbers of vowels in string array is " << vowelsCount << endl;
-	
-	//string
-	cout << str << endl; 
-	
-	//converting lower to upper
-	for(int i=0; i<str.length(); i++)
-		if(str[i] >= 'a' && str[i] <= 'z'){
-			upper = str[i] - 32;
-			cout << upper;
-		}
-		else 
-			cout << str[i];
-	cout << endl;
-			
-	//converting upper to lower
-	for(int i=0; i<str.length(); i++)
-		if(str[i] >= 'A' && str[i] <= 'Z'){
-			lower = str[i] + 32;
-			cout << lower;
-		}
-		else 
-			cout << str[i];
-	cout << endl;
-	
-	//converving space to new line
-	for(int i=0; i<str.length(); i++)
-		if(str[i] == ' ' && str[i-1] != ' ') 
-			cout << endl;
-		else
-			if(str[i] != ' ')
-				cout << str[i];
-	cout << endl;
-				
-	//word count in string array
-	for(int i=0; i<str.length(); i++)
-		if(i >0 && str[i] == ' ' && str[i-1] != ' ')
-			wordCount ++;
-	//check last character in string. if not space, add one to wordCount
-	if (str[str.length()-1] !=' ')
-		wordCount++;	
-	cout << "number of words is " << wordCount << endl;			
-	
-	//displaying a to z
-	cout << "displaying a to z " << endl;
-	for(char ch='a'; ch<='z'; ch++)
-		cout << ch;
-	cout << endl;
-	
-	//displaying A to Z	
-	cout << "displaying A to A " << endl;
-	for(char ch='A'; ch<='Z'; ch++)
-		cout << ch;
-	cout << endl;		
-	
-			
-	
-
+	cout << "add element at the beginning of the array " << endl;
+	cin >> array[0];
 	
 	
+	for(int i=0; i<elementCount; i++)
+		cout << array[i] << endl;
+	
+	cout << "enter next array element value at the end of array " << endl;
+	elementCount ++;
+	cin >> array[elementCount-1];
+	
+	
+	for(int i=0; i<elementCount; i++)
+		cout << array[i] << endl;
+		
+	cout << "which position do you want to add more value " << endl;
+	cin >> pos;
+	
+	
+	for(int i=elementCount-1; i>=pos-1; i--)
+		array[i+1] = array[i];
+	
+	cout << "enter a value " << endl;
+	cin >> array[pos-1];
+	
+	
+	for(int i=0; i<elementCount; i++)
+		cout << array[i] << endl;;		 
 }
 
 	
