@@ -23,26 +23,17 @@ void AddEnd(){
 
 void AddPos(){
 	for(int i=elementCount-1; i>=pos-1; i--)
-		array[i+1] = array[i];	
+		array[i+1] = array[i];
+	elementCount++;
 	cout << "enter a value " << endl;
 	cin >> array[pos-1];
-	elementCount ++;	
 }
 
 void DeleteElement(){
 	
-		if (pos == elementCount){
-			//elementCount--;
-			for(int i=0; i<elementCount; i++)
-				cout << array[i] << endl;
-		}
-		else
-		{
+		if (pos != elementCount)
 			for(int i=pos; i<elementCount; i++)
-				// i=3
 				array[i-1] = array[i];
-		//	elementCount --;
-		}
 		elementCount --;
 }
 
