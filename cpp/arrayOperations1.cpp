@@ -48,34 +48,41 @@ int main(){
 		cout << endl;
 		cout << "what do you want to do ? a/d/n ?" << endl;
 		cin >> choice ;
-		if (choice == 'a'){
-			cout << "which position of array you want ? "<< endl;
-			cin >> pos; 
-			if (pos > elementCount+1)
-				cout << "value should be b/w 1 and " << elementCount << endl;
-			else{
-				if (pos == 1)
-					AddStart(elementCount);
-				else
-					if (pos == elementCount+1)
-						AddEnd(elementCount);
-					else
-						AddPos(elementCount);	
-			}
-		}
 		
-		if (choice =='d'){
-			cout << "which position of array you want ? "<< endl;
-			cin >> pos; 
-			if (pos > elementCount)
-				cout << "value should be b/w 1 and " << elementCount << endl;
-			else
-				DeleteElement(elementCount);
-		}
-		if (choice =='n'){
-			break;	
+		switch(choice){
+			case 'a':
+			case 'A':
+				cout << "which position of array you want ? "<< endl;
+				cin >> pos; 
+				if (pos > elementCount+1)
+					cout << "value should be b/w 1 and " << elementCount << endl;
+				else{
+					if (pos == 1)
+						AddStart(elementCount);
+					else
+						if (pos == elementCount+1)
+							AddEnd(elementCount);
+						else
+							AddPos(elementCount);	
+				}
+				break;
+			case 'd':
+			case 'D':
+				cout << "which position to delete ? "<< endl;
+				cin >> pos;
+				if (pos >elementCount)
+					cout << "Invalid value " << endl;
+				else				
+					DeleteElement(elementCount);
+				break;
+			case 'n':
+			case 'N':
+				break;
+			default:
+				cout << "valid choice are a/d/n ?" <<endl;
+				break;
 		}
 							
-	} while (true);
+	} while (!(choice =='n' || choice == 'N'));
 }
 
