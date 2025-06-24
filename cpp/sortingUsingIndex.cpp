@@ -5,7 +5,7 @@ using namespace std;
 int main(){
 
 	string str = "My Name is  Muhammad and i   am 18 years     old ";
-	int array[]= {27, 12, 32, 7, 45, 25};
+	int array[]= {24, 45, 12, 56, 36, 67};
 				//7, 12, 32, 22, 45, 25
 			//	        22, 32 ...
 				
