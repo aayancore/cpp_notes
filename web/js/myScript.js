@@ -19,6 +19,7 @@ function myFunction5() {
 		text += i+ "<br>";
 	}
 	document.getElementById("demo5").innerHTML = text ;
+	
 	var x = document.getElementById("demo5");
     if (x.style.display === "none") {
         x.style.display = "block";
