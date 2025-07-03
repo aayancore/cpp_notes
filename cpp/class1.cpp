@@ -5,17 +5,19 @@ class Person {
     public:
     int age; 
     string name; 
+    string msg;
     Person(){
-        cout << "new Person created without name and age "<< endl;
+        msg = "New Object Created " ;
+        cout << msg << endl;
     } 
     Person(string str){
         name = str;
-        cout << "new object created with name = " << name << endl;
+        cout << "name = " << name << endl;
     }
-    Person(string str, int n){
+    Person(string str, int age1){
+        age = age1;
         name = str;
-        age = n;
-        cout << "new object created " <<endl;
+        cout << "Age =  " << age  << endl;
     }  
     void printName() {  // Method/function defined inside the class
         cout << "Welcome Mr. " << name << endl;
@@ -27,11 +29,11 @@ class Person {
 
 int main() {
   Person momi("MOhammad", 18);     // Create an object of MyClass
-  momi.printName(); 
-  momi.printAge();
+ // momi.printName(); 
+  //momi.printAge();
     Person tayyaba("Tayyaba Malik", 24);
-    tayyaba.printName();
-    tayyaba.printAge();
+   // tayyaba.printName();
+   // tayyaba.printAge();
  Person test;
  Person awais("Awais");
   return 0;

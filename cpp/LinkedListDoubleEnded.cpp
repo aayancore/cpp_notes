@@ -25,6 +25,7 @@ int main(){
 
 		cout << "enter marks " << endl;
 		cin >> newNode->marks;
+		
 		current ->next = newNode;
 		newNode ->prev = current;
 
