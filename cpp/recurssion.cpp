@@ -20,7 +20,7 @@ int Factorial(int n){
 }
 int main(){
 
-	cout << "sum of numbers from 1 to 10 =" << sumFunc(10) << endl;
+	cout << "sum of numbers from 1 to 5 =" << sumFunc(5) << endl;
 	cout << "factorial of 5 =" << Factorial(5);
 		
 }

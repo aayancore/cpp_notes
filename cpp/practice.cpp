@@ -4,49 +4,39 @@
 #include <conio.h>
 using namespace std;
 
-int main(){
-	struct student {
-		student *prev;
-		int marks;
-		student *next;
-	};
-	student *Head, *newNode, *current;
-	char choice = 'y';
-	Head = new student;
-	Head->next = NULL;
-	Head->prev = NULL;
-	cout << "enter marks " << endl;
-	cin >> Head->marks;
-	current = Head;
-	while (choice=='y'){
-		newNode = new student;
-		newNode ->next = Head;
-		Head->prev = newNode;
+	#include <iostream>
+using namespace std;
 
-		cout << "enter marks " << endl;
-		cin >> newNode->marks;
-		current ->next = newNode;
-		newNode ->prev = current;
+class Adder {
+   public:
+      // constructor
+      Adder(int i = 10) {
+         total = i;
+      }
+      
+      // interface to outside world
+      void addNum(int number) {
+         total += number;
+      }
+      
+      // interface to outside world
+      int getTotal() {
+         return total;
+      };
+      
+   private:
+      // hidden data from outside world
+      int total;
+};
 
-		current = newNode;
-		cout << "do you want more "<< endl;
-		cin >> choice;
-	}
-	current = Head;
-	cout << "List created is forward direction" << endl;
-	do{
-		cout << current->marks << endl;
-		current = current->next;
-	} while (current != Head);
+int main() {
+   Adder a(5);
+   
+   a.addNum(10);
+   a.addNum(20);
+   a.addNum(30);
 
-	current = Head;
-
-	cout << "List created is reverse direction" << endl;
-	do {
-		current = current->prev;
-		cout << current->marks << endl;
-		
-	} while (current != Head);
-
-	return 0;
+   cout << "Total " << a.getTotal() <<endl;
+   return 0;
 }
+
