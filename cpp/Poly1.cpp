@@ -16,6 +16,9 @@ class Dog : public Animal {
     void sound() override {
       cout << "Dog barks\n";
     }
+    void test() {
+      cout << "Dog test\n";
+    }
 };
 
 int main() {
@@ -23,5 +26,6 @@ int main() {
   Dog d;
   a = &d;
   a->sound(); // Outputs: Dog barks
+  d.test();
   return 0;
 }

@@ -1,0 +1,33 @@
+// Function to find the sum of two
+// numbers passed
+#include <string>
+
+namespace MyNamespace {
+   int age = 18;
+   std::string name = "Momi";
+}
+
+// int sumOfTwoNumbers(int a, int b) { return (a + b); }
+
+// class Adder {
+//    public:
+//       // constructor
+//       Adder(int i = 10) {
+//          total = i;
+//       }
+      
+//       // interface to outside world
+//       void addNum(int number) {
+//          total += number;
+//       }
+      
+//       // interface to outside world
+//       int getTotal() {
+//          return total;
+
+//       };
+      
+//    private:
+//       // hidden data from outside world
+//       int total;
+// };
