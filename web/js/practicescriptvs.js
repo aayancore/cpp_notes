@@ -1,3 +1,38 @@
+    function changeText(id) {
+        id.innerHTML = "Ooops!";
+    }
+    function displaydate(){
+      document.getElementById("btn2").innerHTML = "current date";
+      document.getElementById("demo").innerHTML = Date();
+    }
+    function upperCase(x) {
+    //const x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+    }
+    function mOver(obj) {
+      obj.innerHTML = "Thank You"
+    }
+
+    function mOut(obj) {
+      obj.innerHTML = "Mouse Over Me"
+    }
+
+    function myFunction() {
+      document.getElementById("demo5").innerHTML += "Moused over!<br>";
+    }
+
+    function mySecondFunction() {
+      document.getElementById("demo5").innerHTML += "Clicked!<br>";
+    }
+
+    function myThirdFunction() {
+      document.getElementById("demo5").innerHTML += "Moused out!<br>";
+    }
+
+
+
+
+
 function myFunction1() {  
   document.getElementById("demo1").style = "color:Red;background-color:DodgerBlue;";
 

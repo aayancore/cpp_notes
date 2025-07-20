@@ -2,10 +2,34 @@
     <head>
         <title> hello world</title>
         <script src="../js/practicescriptvs.js"></script>
+        <link rel="stylesheet" href="../css/practice.css">
     </head>
     <body>
-        <p>Welcome to first page using vs Code</p>
-        <p id="demo1"> Demo1 A Paragraph</p>
+        <p class="six"> testing </p>
+        <h1 class="bn">test heading</h1>
+        <p class="ex"> Welcome to first page using vs Code</p>
+        <p class="demo1"> Demo1 A Paragraph</p>
         <button type="button" id="btn1" onclick="myFunction1()">Try it</button>
+
+    <h2 onclick="changeText(this)">Click on this text!</h2>
+    <button id="btn2" onclick="displaydate()">press to display date</button>
+    <p id="demo"></p>
+    <input type="text" onchange="upperCase(this)">
+    <br>
+    <br>
+    <div class="bn" onmouseover="mOver(this)" onmouseout="mOut(this)"></div>
+    <br>
+    <div class="bn"> hello </div>
+    Mouse Over Me</div>
+    <br>
+    <br>
+    <button id="btn3"> play it </button>
+    <p id="demo5" </p>
+    <script>
+        var x = document.getElementById("btn3");
+        x.addEventListener("mouseover", myFunction);
+        x.addEventListener("click", mySecondFunction);
+        x.addEventListener("mouseout", myThirdFunction);
+    </script>
     </body>
 </html>
