@@ -44,6 +44,7 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "vector": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "xtree": "cpp"
     }
 }

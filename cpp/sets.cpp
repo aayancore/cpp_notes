@@ -6,9 +6,9 @@
 #include <set>
 using namespace std;
 
-int main() {
+int main(){
     string str = "a quick brown ggggg .";
-    set<char> uniqueChars;
+    set<char, greater<char>> uniqueChars;
     for(int i=0; i<str.length(); i++){
         uniqueChars.insert(str[i]);
     }

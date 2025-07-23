@@ -83,7 +83,7 @@ int main(){
 				continue;
 			}
 			else
-{
+			{
 				cout << "Some error while inserting !" << endl;
 				break;
 			}		
@@ -94,7 +94,8 @@ int main(){
 			else
 				cout << "invalid choice . use y or n only" << endl;
 	}
-	Traverse(Head);
+	//Traverse(Head);
+
 	cout << endl<< "Ascending Order List " << endl;
 	TraverseAscending(Head);
 	cout << endl<< "Descending Order List " << endl;

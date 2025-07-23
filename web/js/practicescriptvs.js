@@ -28,6 +28,12 @@
     function myThirdFunction() {
       document.getElementById("demo5").innerHTML += "Moused out!<br>";
     }
+    function myFunction3() {
+      const myCollection = document.getElementsByTagName("p");
+      for (let i = 0; i < myCollection.length; i++) {
+        myCollection[i].style.color = "red";
+    }
+  }
 
 
 
